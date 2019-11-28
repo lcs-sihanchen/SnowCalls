@@ -37,33 +37,42 @@ class ViewController: UIViewController {
         }
         
         let textPieces = inputTextAsString.split(separator: "\n")
-        let textforTwo = "ABCabc"
-        let textforThree = "DEFdef"
-        let textforFour = "GHIghi"
-        let textforFive = "JKLjkl"
-        let textforSix = "MNOmno"
-        let textforSeven = "PQRSpqrs"
-        let textforEight = "TUVtuv"
-        let textforNine = "WXYZwxyz"
+        let textforTwo = "ABC"
+        let textforThree = "DEF"
+        let textforFour = "GHI"
+        let textforFive = "JKL"
+        let textforSix = "MNO"
+        let textforSeven = "PQRS"
+        let textforEight = "TUV"
+        let textforNine = "WXYZ"
         var convertedMessage = ""
-        
+        var realMessage = ""
         
         for piece in textPieces {
             
             print(piece)
+            let pieceAsString = String(piece)
+            
             
             for character in piece {
+                var wordCount = pieceAsString.count
+                if pieceAsString.contains("-") {
+                    wordCount -= 1
+                }
                 
                 let characterAsString = String(character)
                 
-                if convertedMessage.count == 12 {
-                    convertedMessage += ""
+                if convertedMessage.count == 3 {
+                    convertedMessage += "-"
                 }
                 else if convertedMessage.count == 7 {
                     convertedMessage += "-"
                 }
-                else if convertedMessage.count == 3 {
-                    convertedMessage += "-"
+                if wordCount < 10 {
+                    convertedMessage += ""
+                }
+                else if convertedMessage.count >= 12 {
+                    convertedMessage += ""
                 }
                 else if textforTwo.contains(characterAsString){
                     convertedMessage += "2"
@@ -119,54 +128,30 @@ class ViewController: UIViewController {
                 else if characterAsString == "0" {
                     convertedMessage += "0"
                 }
+                    
                 else {
                     convertedMessage += ""
                 }
                 
                 
-                
-                
-                
-                
-                //                switch characterAsString {
-                //                case textforTwo.contains(characterAsString):
-                //                    convertedMessage += "2"
-                //                case textforThree:
-                //                    convertedMessage += "3"
-                //                case textforFour:
-                //                    convertedMessage += "4"
-                //                case textforFive:
-                //                    convertedMessage += "5"
-                //                case textforSix:
-                //                    convertedMessage += "6"
-                //                case textforSeven:
-                //                    convertedMessage += "7"
-                //                case textforEight:
-                //                    convertedMessage += "8"
-                //                case textforNine:
-                //                    convertedMessage += "9"
-                //                default:
-                //                    convertedMessage += ""
-                //                }
-                
             }
             
-            
-            
-            
-            
-        }
+        if convertedMessage == "" {
+             realMessage += ""
+         } else {
+              realMessage += convertedMessage + "\n"
+         }
         
+         convertedMessage = ""
         
-        
-        
-        outputText.text = convertedMessage
     }
     
     
-    
+        outputText.text = realMessage
     
     
 }
 
 
+
+}
