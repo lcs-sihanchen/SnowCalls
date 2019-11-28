@@ -30,6 +30,30 @@ class ViewController: UIViewController {
     
     
     @IBAction func convertNumbers(_ sender: Any) {
+        
+        guard let inputTextAsString = inputText.text, inputText.text != "" else {
+            outputText.text = "Please enter phone numbers to convert."
+            return
+        }
+        
+        let textPieces = inputTextAsString.split(separator: "\n")
+        
+        for piece in textPieces {
+            
+            print(piece)
+            
+            for character in piece {
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+        }
+        
     }
     
     
