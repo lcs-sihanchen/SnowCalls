@@ -56,13 +56,13 @@ class ViewController: UIViewController {
                 
                 let characterAsString = String(character)
                 
-                if convertedMessage.count == 11 {
+                if convertedMessage.count == 12 {
                     convertedMessage += ""
                 }
-                else if convertedMessage.count == 3 {
+                else if convertedMessage.count == 7 {
                     convertedMessage += "-"
                 }
-                else  if convertedMessage.count == 7 {
+                else if convertedMessage.count == 3 {
                     convertedMessage += "-"
                 }
                 else if textforTwo.contains(characterAsString){
@@ -88,6 +88,36 @@ class ViewController: UIViewController {
                 }
                 else if textforNine.contains(characterAsString){
                     convertedMessage += "9"
+                }
+                else if characterAsString == "1" {
+                    convertedMessage += "1"
+                }
+                else if characterAsString == "2" {
+                    convertedMessage += "2"
+                }
+                else if characterAsString == "3" {
+                    convertedMessage += "3"
+                }
+                else if characterAsString == "4" {
+                    convertedMessage += "4"
+                }
+                else if characterAsString == "5" {
+                    convertedMessage += "5"
+                }
+                else if characterAsString == "6" {
+                    convertedMessage += "6"
+                }
+                else if characterAsString == "7" {
+                    convertedMessage += "7"
+                }
+                else if characterAsString == "8" {
+                    convertedMessage += "8"
+                }
+                else if characterAsString == "9" {
+                    convertedMessage += "9"
+                }
+                else if characterAsString == "0" {
+                    convertedMessage += "0"
                 }
                 else {
                     convertedMessage += ""
