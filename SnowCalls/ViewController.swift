@@ -136,7 +136,7 @@ class ViewController: UIViewController {
                 
             }
             
-        if convertedMessage == "" {
+            if convertedMessage == "" || convertedMessage.count < 12 {
              realMessage += ""
          } else {
               realMessage += convertedMessage + "\n"
