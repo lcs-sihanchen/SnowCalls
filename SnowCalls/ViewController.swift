@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var inputText: UITextView!
     
@@ -22,8 +22,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
     
     
     
@@ -37,12 +37,24 @@ class ViewController: UIViewController {
         }
         
         let textPieces = inputTextAsString.split(separator: "\n")
+        let textforTwo = "ABCabc"
+        let textforThree = "DEFdef"
+        let textforFour = "GHIghi"
+        let textforFive = "JKLjkl"
+        let textforSix = "MNOmno"
+        let textforSeven = "PQRSpqrs"
+        let textforEight = "TUVtuv"
+        let textforNine = "WXYZwxyz"
+        
         
         for piece in textPieces {
             
             print(piece)
             
             for character in piece {
+                
+                
+                
                 
             }
             
