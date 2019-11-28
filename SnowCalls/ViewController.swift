@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         let textforSeven = "PQRSpqrs"
         let textforEight = "TUVtuv"
         let textforNine = "WXYZwxyz"
-        
+        var convertedMessage = ""
         
         for piece in textPieces {
             
@@ -53,8 +53,27 @@ class ViewController: UIViewController {
             
             for character in piece {
                 
-                
-                
+                let characterAsString = String(character)
+                switch characterAsString {
+                case textforTwo.contains(characterAsString):
+                    convertedMessage += "2"
+                case textforThree:
+                    convertedMessage += "3"
+                case textforFour:
+                    convertedMessage += "4"
+                case textforFive:
+                    convertedMessage += "5"
+                case textforSix:
+                    convertedMessage += "6"
+                case textforSeven:
+                    convertedMessage += "7"
+                case textforEight:
+                    convertedMessage += "8"
+                case textforNine:
+                    convertedMessage += "9"
+                default:
+                    convertedMessage += ""
+                }
                 
             }
             
@@ -65,7 +84,7 @@ class ViewController: UIViewController {
             
             
         }
-        
+        outputText.text = convertedMessage
     }
     
     
