@@ -7,20 +7,23 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+// UITextViewDelegate -- means we promise to implement certain methods on this class, or, also, can mean some functionality is now made available to us
+class ViewController: UIViewController, UITextViewDelegate {
     
-    // MARK: Prperties
+    // MARK: Properties
     @IBOutlet weak var inputText: UITextView!
     
     
     @IBOutlet weak var outputText: UITextView!
     
     
-    
+    // This method runs ONCE when the view first loads
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Make this class be the delegate for the input text view
+        inputText.delegate = self
     }
     
     
@@ -166,6 +169,11 @@ class ViewController: UIViewController {
         
     }
     
-    
+    // UITextViewDelegate Methods
+    // Called automatically when the contents of the text view are changed
+    func textViewDidChange(_ textView: UITextView) {
+        // Reset the output text view
+        outputText.text = ""
+    }
     
 }
